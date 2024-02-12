@@ -66,10 +66,10 @@ function createCalda() {
 
     var imgCalda = new Image();
 
-    if( direction == "right") imgCalda.src= "img/caldaCobra1.png";
-    if (direction == "left") imgCalda.src= "img/caldaCobra2.png";
-    if (direction == "up") imgCalda.src= "img/caldaCobra3.png";
-    if (direction == "down") imgCalda.src= "img/caldaCobra4.png";
+    if (snakeHead[lastIndex].x < snakeHead[penultimoIndex].x) imgCalda.src= "img/caldaCobra1.png";
+    if (snakeHead[lastIndex].x > snakeHead[penultimoIndex].x) imgCalda.src= "img/caldaCobra2.png";
+    if (snakeHead[lastIndex].y > snakeHead[penultimoIndex].y) imgCalda.src= "img/caldaCobra3.png";
+    if (snakeHead[lastIndex].y < snakeHead[penultimoIndex].y) imgCalda.src= "img/caldaCobra4.png";
     context.drawImage(imgCalda, snakeHead[lastIndex].x, snakeHead[lastIndex].y, box, box);
 }
 
